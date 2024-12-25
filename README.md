@@ -1,3 +1,5 @@
+![project-website](preview.png)
+
 # Portfolio Website Project
 
 This is a personal portfolio website built using **HTML** and **CSS** to showcase your profile, skills, and machine learning projects. The website is designed to be simple, responsive, and visually appealing.
