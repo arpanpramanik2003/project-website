@@ -194,12 +194,13 @@ body {
     margin-bottom: 1.5rem;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: backgroung-color 0.5s, box-shadow 0.2s;
+    transition: backgroung-color 0.5s, box-shadow 0.2s, transform 0.4s;
 }
 
 .project-container:hover{
     background-color: #e4e4e4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transform: scale(1.02);
 }
 
 .project-info {
