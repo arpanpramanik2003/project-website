@@ -194,6 +194,12 @@ body {
     margin-bottom: 1.5rem;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: backgroung-color 0.5s, box-shadow 0.2s;
+}
+
+.project-container:hover{
+    background-color: #e4e4e4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .project-info {
@@ -220,15 +226,17 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .project-container button:hover {
     background-color: #ff4c60;
+    transform: scale(1.2);
 }
 
 .project-container button:active {
     background-color: #1a1a2e;
+    transform: scale(1);
 }
 
 .about {
