@@ -194,7 +194,7 @@ body {
     margin-bottom: 1.5rem;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: backgroung-color 0.5s, box-shadow 0.2s, transform 0.4s;
+    transition: backgroung-color 0.5s, box-shadow 0.2s, transform 0.5s;
 }
 
 .project-container:hover{
@@ -220,8 +220,14 @@ body {
     color: #333333;
 }
 
+.project-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
 .project-container button {
     padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
     background-color: #1a1a2e;
     color: #ffffff;
     border: none;
@@ -297,8 +303,11 @@ body {
     .project-info {
         max-width: 100%;
     }
+    .project-btn {
+        align-items: center;
+    }
+
     .image-section {
         margin-top: 4rem;
     }
 }
-
