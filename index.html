@@ -1,255 +1,450 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
-    <link rel="stylesheet" href="static/style.css">
+    <title>Arpan Pramanik | ML Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-</head>
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
-<body>
-    <header>
-        <div class="header">
-            <div class="nav">
-                <a href="#" class="nav-sub">Home</a>
-                <div class="dropdown">
-                    <a href="#project-section" class="nav-sub dropdown-btn">Projects</a>
-                    <div class="dropdown-content">
-                        <a href="#car">Car Price Prediction</a>
-                        <a href="#calories">Calories Burnt Prediction</a>
-                        <a href="#diabetes">Diabetes Prediction</a>
-                        <a href="#loan">Loan Status Prediction</a>
-                        <a href="#medical">Medical Insurance Prediction</a>
-                        <a href="#sentement">Sentement Analysis</a>
-                        <a href="#waste">Smart Waste Classification</a>
-                        <a href="#fruits">Fruit-Veg Classification</a>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+    <!-- Header/Navigation -->
+    <header class="fixed top-0 w-full bg-gray-900 text-white shadow-lg z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold gradient-text">Arpan Pramanik</a>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link hover:text-indigo-300 transition">Home</a>
+                
+                <div class="dropdown relative">
+                    <button class="nav-link hover:text-indigo-300 transition flex items-center">
+                        Projects <i class='bx bx-chevron-down ml-1'></i>
+                    </button>
+                    <div class="dropdown-content absolute left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-xl py-1 z-50">
+                        <a href="#car" class="block px-4 py-2 hover:bg-gray-700 transition">Car Price Prediction</a>
+                        <a href="#calories" class="block px-4 py-2 hover:bg-gray-700 transition">Calories Burnt Prediction</a>
+                        <a href="#diabetes" class="block px-4 py-2 hover:bg-gray-700 transition">Diabetes Prediction</a>
+                        <a href="#loan" class="block px-4 py-2 hover:bg-gray-700 transition">Loan Status Prediction</a>
+                        <a href="#medical" class="block px-4 py-2 hover:bg-gray-700 transition">Medical Insurance</a>
+                        <a href="#sentement" class="block px-4 py-2 hover:bg-gray-700 transition">Sentiment Analysis</a>
+                        <a href="#waste" class="block px-4 py-2 hover:bg-gray-700 transition">Waste Classification</a>
+                        <a href="#fruits" class="block px-4 py-2 hover:bg-gray-700 transition">Fruit-Veg Classification</a>
                     </div>
                 </div>
-                <a href="#about" class="nav-sub">About Me</a>
-                <a href="#reach-out" class="nav-sub">Reach Out</a>
+                
+                <a href="#about" class="nav-link hover:text-indigo-300 transition">About Me</a>
+                <a href="#reach-out" class="nav-link hover:text-indigo-300 transition">Reach Out</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <div class="hidden md:flex items-center space-x-2">
+                    <span class="text-sm">Welcome!</span>
+                    <img src="static/rem_home.png" alt="Profile" class="w-8 h-8 rounded-full border-2 border-indigo-400">
+                </div>
+                <button class="md:hidden text-2xl" id="mobile-menu-button">
+                    <i class='bx bx-menu'></i>
+                </button>
             </div>
-            <div class="info">
-                <div>
-                    <p>Arpan Pramanik</p>
-                </div>
-                <div class="profile-pic">
-                    <img src="static/arpan.jpg" alt="Profile Picture">
-                </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-gray-800" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Home</a>
+                <a href="#project-section" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Projects</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">About Me</a>
+                <a href="#reach-out" class="block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-700">Reach Out</a>
             </div>
         </div>
     </header>
-    <section class="home" id="home">
-        <div class="describtion">
-            <h3 class="animate__animated animate__fadeInDown">Welcome to My Website</h3>
-            <h1 class="animate__animated animate__fadeInLeftBig">Hi, I am Arpan Pramanik</h1>
-            <p>
-                Explore my deployed <strong>Machine Learning projects</strong> by clicking on the
-                <strong>"Projects"</strong> link above. Each project is interactive, allowing you to test models like
-                car price prediction and calories burnt estimation etc. Dive in to experience the practical applications
-                of AI and ML!
-            </p>
-            <a href="#project-section"><button class="btn btn-explore 
-                animate__animated animate__zoomIn">Explore Projects</button></a>
-            <a href="#about"><button class="btn btn-about animate__animated
-                animate__zoomIn">About Me</button></a>
-        </div>
-        <div class="image-section">
-            <div class="image-div animate__animated animate__bounceInRight">
-                <img src="static/rem_home.png" alt="profile-image">
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 bg-gradient-to-br from-gray-50 to-indigo-50">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between">
+            <div class="lg:w-1/2 mb-12 lg:mb-0 animate__animated animate__fadeInLeft">
+                <h3 class="text-lg text-indigo-600 mb-2 font-medium">Welcome to My Portfolio</h3>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Hi, I'm <span class="gradient-text">Arpan Pramanik</span></h1>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    I'm an AIML student passionate about building intelligent solutions. Explore my interactive machine learning projects below, each designed to showcase practical applications of AI and ML technologies.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#project-section" class="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-lg shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        Explore Projects
+                    </a>
+                    <a href="#about" class="px-6 py-3 border-2 border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-600 hover:text-white transition duration-300">
+                        About Me
+                    </a>
+                </div>
+            </div>
+            
+            <div class="lg:w-1/2 flex justify-center animate__animated animate__fadeInRight">
+                <div class="relative profile-image-container w-64 h-64 md:w-80 md:h-80">
+                    <img src="static/rem_home.png" alt="Profile" class="w-full h-full rounded-full object-cover border-4 border-white relative z-10">
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="project-section" class="project-section">
-        <div class="h2-section">
-            <h1>Projects</h1>
+    <!-- Projects Section -->
+    <section id="project-section" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">My <span class="gradient-text">Projects</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
+            </div>
+            
+            <!-- Project Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Car Price Prediction -->
+                <div id="car" class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center mr-4">
+                                <i class='bx bx-car text-2xl text-indigo-600'></i>
+                            </div>
+                            <h3 class="project-title text-xl font-bold">Car Price Prediction</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Get accurate price estimates for cars based on key features like brand, model, mileage, fuel type, and more.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://car-price-prediction-arpan.streamlit.app" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+                                Test Live
+                            </a>
+                            <a href="https://github.com/arpanpramanik2003/Car-Price-Prediction-Streamlit.git" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 border border-indigo-600 text-indigo-600 rounded-lg hover:bg-indigo-50 transition">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Calories Burnt Prediction -->
+                <div id="calories" class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mr-4">
+                                <i class='bx bx-run text-2xl text-purple-600'></i>
+                            </div>
+                            <h3 class="project-title text-xl font-bold">Calories Burnt Prediction</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Estimate calories burnt based on age, weight, duration, activity type, and intensity.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://calories-burnt-prediction-fe8m.onrender.com" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition">
+                                Test Live
+                            </a>
+                            <a href="https://github.com/arpanpramanik2003/Calories_Burnt_Prediction_Using_Flask.git" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 border border-purple-600 text-purple-600 rounded-lg hover:bg-purple-50 transition">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Diabetes Prediction -->
+                <div id="diabetes" class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mr-4">
+                                <i class='bx bx-heart text-2xl text-blue-600'></i>
+                            </div>
+                            <h3 class="project-title text-xl font-bold">Diabetes Prediction</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Predict diabetes likelihood based on glucose level, blood pressure, age, and other health metrics.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://diabetes-prediction-arpan.streamlit.app" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
+                                Test Live
+                            </a>
+                            <a href="https://github.com/arpanpramanik2003/Diabetes-Prediction-Streamlit.git" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Loan Status Prediction -->
+                <div id="loan" class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mr-4">
+                                <i class='bx bx-money text-2xl text-green-600'></i>
+                            </div>
+                            <h3 class="project-title text-xl font-bold">Loan Status Prediction</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Determine loan approval likelihood based on income, credit history, loan amount, and other factors.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://loan-status-prediction-arpan.streamlit.app" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+                                Test Live
+                            </a>
+                            <a href="https://github.com/arpanpramanik2003/Loan_Status_Prediction.git" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 border border-green-600 text-green-600 rounded-lg hover:bg-green-50 transition">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Medical Insurance Cost Prediction -->
+                <div id="medical" class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mr-4">
+                                <i class='bx bx-plus-medical text-2xl text-red-600'></i>
+                            </div>
+                            <h3 class="project-title text-xl font-bold">Medical Insurance Cost</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Predict medical insurance costs based on age, BMI, smoking habits, and other factors.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://medical-insurance-cost-prediction-arpan.streamlit.app" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition">
+                                Test Live
+                            </a>
+                            <a href="https://github.com/arpanpramanik2003/Medical_Insurance_Cost_Prediction-Streamlit.git" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 border border-red-600 text-red-600 rounded-lg hover:bg-red-50 transition">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sentiment Analysis -->
+                <div id="sentement" class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mr-4">
+                                <i class='bx bx-movie text-2xl text-yellow-600'></i>
+                            </div>
+                            <h3 class="project-title text-xl font-bold">Sentiment Analysis</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Analyze movie reviews to determine positive or negative sentiments using LSTM models.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://sentiment-analysis-lstm-arpan.streamlit.app/" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 bg-yellow-600 text-white rounded-lg hover:bg-yellow-700 transition">
+                                Test Live
+                            </a>
+                            <a href="https://github.com/arpanpramanik2003/sentiment-analysis-lstm.git" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 border border-yellow-600 text-yellow-600 rounded-lg hover:bg-yellow-50 transition">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Smart Waste Classification -->
+                <div id="waste" class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-teal-100 flex items-center justify-center mr-4">
+                                <i class='bx bx-trash text-2xl text-teal-600'></i>
+                            </div>
+                            <h3 class="project-title text-xl font-bold">Waste Classification</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Identify waste categories from images using MobileNet, trained on the TrashNet dataset.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://smart-waste-arpan.streamlit.app/" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition">
+                                Test Live
+                            </a>
+                            <a href="https://github.com/arpanpramanik2003/smart-waste-classification.git" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 border border-teal-600 text-teal-600 rounded-lg hover:bg-teal-50 transition">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fruit-Veg Classification -->
+                <div id="fruits" class="project-card bg-gray-50 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition duration-500 transform hover:-translate-y-2">
+                    <div class="p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mr-4">
+                                <i class='bx bx-food-menu text-2xl text-orange-600'></i>
+                            </div>
+                            <h3 class="project-title text-xl font-bold">Fruit-Veg Classification</h3>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Identify different fruits and vegetables from images using a custom CNN model.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://fruit-veg-detection-custom-cnn-arpan.streamlit.app/" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition">
+                                Test Live
+                            </a>
+                            <a href="https://github.com/arpanpramanik2003/fruit-veg-detection-custom-CNN.git" target="_blank" class="flex-1 min-w-[120px] text-center px-4 py-2 border border-orange-600 text-orange-600 rounded-lg hover:bg-orange-50 transition">
+                                View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="project-container" id="car">
-            <div class="project-info">
-                <h2>Car Price Prediction</h2>
-                <p>Get accurate price estimates for cars based on key features like brand,
-                    model, mileage, fuel type, and more. This project leverages machine
-                    learning to provide quick and reliable insights,
-                    helping users make smarter buying or selling decisions.</p>
-            </div>
-            <div class="project-btn">
-                <a href="https://car-price-prediction-arpan.streamlit.app​" target="_blank">
-                    <button>Test</button>
-                </a>
-                <a href="https://github.com/arpanpramanik2003/Car-Price-Prediction-Streamlit.git" target="_blank">
-                    <button>Get Project</button>
-                </a>
-            </div>
-        </div>
-        <div class="project-container" id="calories">
-            <div class="project-info">
-                <h2>Calories Burnt Prediction</h2>
-                <p>Accurately estimate calories burnt based on factors like age,
-                    weight, duration, activity type, and intensity. This project
-                    utilizes machine learning to deliver fast and reliable insights,
-                    helping users track and optimize their fitness goals effectively</p>
-            </div>
-            <div class="project-btn">
-                <a href="https://calories-burnt-prediction-fe8m.onrender.com​" target="_blank">
-                    <button>Test</button>
-                </a>
-                <a href="https://github.com/arpanpramanik2003/Calories_Burnt_Prediction_Using_Flask.git"
-                    target="_blank">
-                    <button>Get Project</button>
-                </a>
-            </div>
-        </div>
-        <div class="project-container" id="diabetes">
-            <div class="project-info">
-                <h2>Diabetes Prediction</h2>
-                <p>Predict the likelihood of diabetes based on key health
-                    metrics like glucose level, blood pressure, age, and
-                    more. This project uses machine learning to provide
-                    quick and accurate predictions, supporting better
-                    health management and early intervention.</p>
-            </div>
-            <div class="project-btn">
-                <a href="https://diabetes-prediction-arpan.streamlit.app" target="_blank">
-                    <button>Test</button>
-                </a>
-                <a href="https://github.com/arpanpramanik2003/Diabetes-Prediction-Streamlit.git" target="_blank">
-                    <button>Get Project</button>
-                </a>
-            </div>
-        </div>
-        <div class="project-container" id="loan">
-            <div class="project-info">
-                <h2>Loan Status Prediction</h2>
-                <p>Determine the likelihood of loan approval based on factors like applicant
-                    income, credit history, loan amount, and more. This project leverages machine
-                    learning to provide fast and reliable predictions, aiding financial decision-making.</p>
-            </div>
-            <div class="project-btn">
-                <a href="https://loan-status-prediction-arpan.streamlit.app" target="_blank">
-                    <button>Test</button>
-                </a>
-                <a href="https://github.com/arpanpramanik2003/Loan_Status_Prediction.git" target="_blank">
-                    <button>Get Project</button>
-                </a>
-            </div>
-        </div>
-        <div class="project-container" id="medical">
-            <div class="project-info">
-                <h2>Medical Insurence Cost Prediction</h2>
-                <p>Predict the cost of medical insurance based on key factors such as age,
-                    BMI, smoking habits, and more. This project uses machine learning to
-                    provide accurate cost estimates, helping users plan their healthcare
-                    expenses effectively.</p>
-            </div>
-            <div class="project-btn">
-                <a href="https://medical-insurance-cost-prediction-arpan.streamlit.app" target="_blank">
-                    <button>Test</button>
-                </a>
-                <a href="https://github.com/arpanpramanik2003/Medical_Insurance_Cost_Prediction-Streamlit.git"
-                    target="_blank">
-                    <button>Get Project</button>
-                </a>
-            </div>
-        </div>
-        <div class="project-container" id="sentement">
-            <div class="project-info">
-                <h2>Sentement Analysis on Movie Review</h2>
-                <p>Analyze movie reviews to determine whether they express positive or negative
-                    sentiments. This project leverages deep learning techniques, particularly LSTM models,
-                    to accurately classify sentiment based on textual data. Gain insights into audience
-                    opinions and improve decision-making in areas like marketing, content strategy, and 
-                    user experience.</p>
-            </div>
-            <div class="project-btn">
-                <a href="https://sentiment-analysis-lstm-arpan.streamlit.app/" target="_blank">
-                    <button>Test</button>
-                </a>
-                <a href="https://github.com/arpanpramanik2003/sentiment-analysis-lstm.git"
-                    target="_blank">
-                    <button>Get Project</button>
-                </a>
-            </div>
-        </div>
-        <div class="project-container" id="waste">
-            <div class="project-info">
-                <h2>Smart Waste Classification</h2>
-                <p>The Smart Waste Classification system uses MobileNet to identify 
-                    waste categories from images. Trained on the TrashNet dataset, 
-                    it helps users determine if an item is recyclable, compostable,
-                    or non-recyclable. Along with classification, it provides recycling
-                    suggestions to promote sustainable waste management and environmental
-                    awareness through AI-powered insights.</p>
-            </div>
-            <div class="project-btn">
-                <a href="https://smart-waste-arpan.streamlit.app/" target="_blank">
-                    <button>Test</button>
-                </a>
-                <a href="https://github.com/arpanpramanik2003/smart-waste-classification.git"
-                    target="_blank">
-                    <button>Get Project</button>
-                </a>
-            </div>
-         </div>
-         <div class="project-container" id="fruits">
-            <div class="project-info">
-                <h2>Fruit-Veg Classification</h2>
-                <p>The Fruits & Vegetables Classification system uses a CNN model to identify
-                    different fruits and vegetables from images. Trained on a custom dataset, 
-                    it provides users with predictions and confidence scores. Built with TensorFlow
-                    and deployed using Streamlit, this tool offers a simple, interactive interface
-                    to upload images and view results, helping users identify produce accurately
-                    while visualizing the classification probabilities.</p>
-            </div>
-            <div class="project-btn">
-                <a href="https://fruit-veg-detection-custom-cnn-arpan.streamlit.app/" target="_blank">
-                    <button>Test</button>
-                </a>
-                <a href="https://github.com/arpanpramanik2003/fruit-veg-detection-custom-CNN.git"
-                    target="_blank">
-                    <button>Get Project</button>
-                </a>
-            </div>
-         </div>
-         </div>
     </section>
-    <section class="about" id="about">
-        <div class="h2-section">
-            <h1>About</h1>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">About <span class="gradient-text">Me</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-10">
+                <div class="flex flex-col md:flex-row items-center mb-8">
+                    <img src="static/rem_home.png" alt="Arpan Pramanik" class="w-32 h-32 rounded-full border-4 border-indigo-100 mb-6 md:mb-0 md:mr-8">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-2">Arpan Pramanik</h3>
+                        <p class="text-indigo-600 font-medium">AIML Student & Developer</p>
+                    </div>
+                </div>
+                
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    I am an enthusiastic <span class="font-semibold text-indigo-700">AIML student</span> currently pursuing a B.Tech in Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning at <span class="font-semibold text-indigo-700">The Neotia University</span>.
+                </p>
+                
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    My passion lies in exploring the fascinating world of <span class="font-semibold text-indigo-700">Machine Learning</span> and <span class="font-semibold text-indigo-700">Deep Learning</span>, where I have worked on several impactful projects, including those deployed on platforms like Render and Streamlit.
+                </p>
+                
+                <p class="text-gray-600 leading-relaxed">
+                    In addition to my work in AI, I am delving into the creative realm of <span class="font-semibold text-indigo-700">Frontend Development</span>, utilizing technologies like HTML, CSS, and Flask to bring my ideas to life. This portfolio serves as a hub to showcase my projects, share my learning journey, and connect with like-minded individuals. Explore my work, and let's build something amazing together!
+                </p>
+                
+                <div class="mt-8 pt-6 border-t border-gray-200">
+                    <h4 class="text-lg font-semibold mb-4">Technical Skills</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">Python</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">Machine Learning</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">Deep Learning</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">TensorFlow</span>
+                        <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">Flask</span>
+                        <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">Streamlit</span>
+                        <span class="px-3 py-1 bg-teal-100 text-teal-800 rounded-full text-sm">HTML/CSS</span>
+                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm">JavaScript</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p>
-            I am an enthusiastic <strong>AIML student</strong> currently pursuing a B.Tech in Computer Science and
-            Engineering with a specialization in Artificial Intelligence and Machine Learning at <strong>The Neotia
-                University</strong>. My passion lies in exploring the fascinating world of <strong>Machine
-                Learning</strong> and <strong>Deep Learning</strong>, where I have worked on several impactful
-            projects, including those deployed on platforms like Render. In addition to my work in AI, I am delving
-            into the creative realm of <strong>Frontend Development</strong>, utilizing technologies like HTML, CSS,
-            and Flask to bring my ideas to life. This website serves as a hub to showcase my projects, share my
-            learning journey, and connect with like-minded individuals. Explore my work, and let’s build something
-            amazing together!
-        </p>
     </section>
-    <section class="reach-out" id="reach-out">
-        <div class="h2-section">
-            <h1>Reach Out</h1>
-        </div>
-        <div class="icons">
-            <a href="https://github.com/arpanpramanik2003" target="_blank">
-                <i class='bx bxl-github'></i>
-            </a>
-            <a href="https://www.linkedin.com/in/arpan-pramanik-6a409228a" target="_blank">
-                <i class='bx bxl-linkedin'></i>
-            </a>
-            <a href="mailto:pramanikarpan089@gmail.com" target="_blank">
-                <i class='bx bxl-gmail'></i>
-            </a>
-            <a href="https://www.facebook.com/profile.php?id=100083197340711&mibextid=ZbWKwL" target="_blank">
-                <i class='bx bxl-facebook-circle'></i>
-            </a>
+
+    <!-- Reach Out Section -->
+    <section id="reach-out" class="py-20 px-6 bg-gray-900 text-white">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Reach <span class="gradient-text">Out</span></h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto"></div>
+                <p class="mt-6 text-gray-300 max-w-2xl mx-auto">
+                    Feel free to connect with me on these platforms. I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision.
+                </p>
+            </div>
+            
+            <div class="flex justify-center space-x-8 md:space-x-12">
+                <a href="https://github.com/arpanpramanik2003" target="_blank" class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-3xl hover:bg-indigo-600 transition duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://www.linkedin.com/in/arpan-pramanik-6a409228a" target="_blank" class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-3xl hover:bg-blue-600 transition duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                    <i class='bx bxl-linkedin'></i>
+                </a>
+                <a href="mailto:pramanikarpan089@gmail.com" target="_blank" class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-3xl hover:bg-red-600 transition duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                    <i class='bx bxl-gmail'></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100083197340711&mibextid=ZbWKwL" target="_blank" class="w-16 h-16 rounded-full bg-gray-800 flex items-center justify-center text-3xl hover:bg-blue-700 transition duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+            </div>
+            
+            <div class="mt-16 text-center">
+                <p class="text-gray-400">
+                    &copy; 2023 Arpan Pramanik. All rights reserved.
+                </p>
+            </div>
         </div>
     </section>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-indigo-600 text-white rounded-full shadow-lg hidden items-center justify-center text-2xl transition duration-300 hover:bg-indigo-700">
+        <i class='bx bx-chevron-up'></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('hidden');
+                backToTopButton.classList.add('flex');
+            } else {
+                backToTopButton.classList.add('hidden');
+                backToTopButton.classList.remove('flex');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Add active class to current section in navigation
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-indigo-300');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-indigo-300');
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>
